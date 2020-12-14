@@ -6,3 +6,6 @@ and has equal or more characters.
 # reason
 We if you have played that game where you have to enter a word starting with certain character of certain no. 
 of characters. This can relax your brain and do the thinking.
+
+# start.sh
+A windows user with git-bash and pyhton3 installed in the system, can simply click on it and use the program.
