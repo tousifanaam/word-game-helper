@@ -1,7 +1,19 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Program for nailing wordgames
 
 import string
+from os import system, name
+
+def clear(): 
+  
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
+  
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear')
+
 alphabet_list_l = list(string.ascii_lowercase)
 alphabet_list_u = list(string.ascii_uppercase)
 base_10 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',]
@@ -13,9 +25,9 @@ for word in file:
     words.append(''.join(clean_word))
 
 print("Vocab count:  " + str(len(words)))
+print("Type 'quit' to leave.\n")
 
 while True:
-	print()
 	while True:
 		start = input("Starting Alphabet:  ")
 		if start == 'quit':
@@ -46,6 +58,7 @@ while True:
 		else:
 			print("ERR. Try again.\n")
 
+	print()
 	total = int(total)
 	check = 0
 	success = 0
@@ -61,3 +74,7 @@ while True:
 			break
 	if success == 0:
 		print('░░░ Nothing Found! ░░░')
+
+	# refresh 
+	response = input("\n\nPress enter to refresh.")
+	clear()
